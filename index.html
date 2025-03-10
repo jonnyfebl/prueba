@@ -10,17 +10,30 @@
 
     <header>
         <h1>Explicaciones de Series (Sin Spoilers)</h1>
+        <button id="dark-mode-toggle">🌙 Modo Oscuro</button>
     </header>
 
     <main>
-        <section id="series-list">
-            <h2>Lista de Series</h2>
-            <ul>
-                <li onclick="showDetails('breaking-bad')">Breaking Bad</li>
-                <li onclick="showDetails('stranger-things')">Stranger Things</li>
-                <li onclick="showDetails('dark')">Dark</li>
-                <li onclick="showDetails('game-of-thrones')">Game of Thrones</li>
-            </ul>
+        <section id="series-container">
+            <h2>Series Populares</h2>
+            <div class="series-grid">
+                <div class="series-card" onclick="showDetails('breaking-bad')">
+                    <img src="img/breaking-bad.jpg" alt="Breaking Bad">
+                    <h3>Breaking Bad</h3>
+                </div>
+                <div class="series-card" onclick="showDetails('stranger-things')">
+                    <img src="img/stranger-things.jpg" alt="Stranger Things">
+                    <h3>Stranger Things</h3>
+                </div>
+                <div class="series-card" onclick="showDetails('dark')">
+                    <img src="img/dark.jpg" alt="Dark">
+                    <h3>Dark</h3>
+                </div>
+                <div class="series-card" onclick="showDetails('game-of-thrones')">
+                    <img src="img/game-of-thrones.jpg" alt="Game of Thrones">
+                    <h3>Game of Thrones</h3>
+                </div>
+            </div>
         </section>
 
         <section id="series-details">
@@ -33,4 +46,3 @@
 
 </body>
 </html>
-

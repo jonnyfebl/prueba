@@ -1,51 +1,101 @@
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    transition: background 0.3s, color 0.3s;
 }
 
+/* Encabezado */
 header {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative;
 }
 
-main {
-    width: 80%;
+#dark-mode-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#dark-mode-toggle:hover {
+    background: #ddd;
+}
+
+/* Contenedor de series */
+#series-container {
+    width: 90%;
     margin: 20px auto;
-    display: flex;
+}
+
+.series-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-#series-list {
-    flex: 1;
+.series-card {
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.series-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.series-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.series-card h3 {
+    margin-top: 10px;
+}
+
+/* Sección de detalles */
 #series-details {
-    flex: 2;
-    background: white;
+    width: 80%;
+    margin: 30px auto;
     padding: 20px;
+    background: white;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Modo oscuro */
+.dark-mode {
+    background-color: #222;
+    color: white;
 }
 
-li {
-    background: white;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
+.dark-mode header {
+    background-color: #111;
 }
 
-li:hover {
-    background: #ddd;
+.dark-mode .series-card {
+    background: #333;
+    color: white;
+}
+
+.dark-mode #series-details {
+    background: #444;
 }

@@ -1,3 +1,7 @@
+document.getElementById("dark-mode-toggle").addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+});
+
 function showDetails(series) {
     const detailsText = document.getElementById("details-text");
 
